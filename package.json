@@ -1,0 +1,24 @@
+{
+  "name": "auto-reporter",
+  "version": "1.0.0",
+  "description": "testing npm and node technologies. Approaching new headless browser technologies.",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^4.2.0",
+    "puppeteer": "^0.12.0",
+    "slack-notify": "^0.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshasTob/auto-reporter.git"
+  },
+  "engines": {
+    "node": ">=4.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AshasTob",
+  "license": "ISC"
+}

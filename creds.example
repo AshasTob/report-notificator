@@ -1,0 +1,19 @@
+module.exports = {
+    //SYSTEM LOGIN
+    target: {
+        username: 'username',
+        password: 'password',
+        errorText: 'No reports for this day.'
+    },
+    //USE YOUR GOOGLE GMAIL ACCOUNT
+    smtp: {
+        username: 'login',
+        password: 'pass'
+    },
+    //URL TO SLACK WEBHOOKS SERVICE
+    slack: {
+        webhook: 'https://hooks.slack.com/services/...'
+    },
+    //SERVICE THAT WE ARE USING TO REPORT
+     service: "https://change_to_reporting_site.com"
+}
