@@ -31,9 +31,9 @@ async function run() {
     const report = await frame.$(NAV.reportTableItem);
 
     let reportText = await frame.evaluate((sel) => {
-        let element = document.querySelector(sel);
-    return element ? element.innerHTML : null;
-}, NAV.reportTableItem);
+			let element = document.querySelector(sel);
+			return element ? element.innerHTML : null;
+	}, NAV.reportTableItem);
 
     console.log(reportText);
 
@@ -48,12 +48,15 @@ async function run() {
     if (reportText === CREDS.target.errorText) {
         message.setText("There is an issue. Missing report on " + new Date());
         console.log(message.text);
-        var Slacker = require("./slacker.js");
-        var slacker = new Slacker();
         var Mailer = require("./mailer.js");
         var mailer = new Mailer();
         mailer.send(message);
-        slacker.send(message);
+		//send slack notification only in case you have webhook configured.
+		if(CREDS.slack.webhook != '') {
+			var Slacker = require("./slacker.js");
+			var slacker = new Slacker();
+			slacker.send(message);
+		}
     } else {
         console.log("All is good");
     }

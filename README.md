@@ -13,6 +13,6 @@ Dependencies and requirements:
 - Node 8+.
 - 150MB of empty space for Chromium.
 
-How to install: `npm init`
+How to install: `npm install`
 
 How to run: `node index.js`

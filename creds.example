@@ -3,6 +3,7 @@ module.exports = {
     target: {
         username: 'username',
         password: 'password',
+		//KEEP THIS ERROR TEXT UNCHANGED
         errorText: 'No reports for this day.'
     },
     //USE YOUR GOOGLE GMAIL ACCOUNT
@@ -11,6 +12,7 @@ module.exports = {
         password: 'pass'
     },
     //URL TO SLACK WEBHOOKS SERVICE
+	//SET TO EMPTY STRING IF YOU HAVE NO SLACK CHANNEL.
     slack: {
         webhook: 'https://hooks.slack.com/services/...'
     },
