@@ -6,7 +6,9 @@ function Mailer() {
     //this._age = age;
     this.nodemailer = require('nodemailer');
     this.transporter = this.nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        secure: true,
+        port: 465,
         auth: {
             user: CREDS.smtp.username,
             pass: CREDS.smtp.password

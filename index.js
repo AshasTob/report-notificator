@@ -36,11 +36,11 @@ async function run() {
 	}, NAV.reportTableItem);
 
     console.log(reportText);
-
+        
     var Message = require("./message.js");
     var message = new Message(
-        'bratokokok@gmail.com',
-        'bratokokok@gmail.com',
+        CREDS.mail.from,
+        CREDS.mail.to,
         'Reports notification',
         ''
     );
