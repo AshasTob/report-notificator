@@ -37,10 +37,14 @@ async function run() {
 
     console.log(reportText);
 
+    var targetEmail = CREDS.smtp.username.indexOf('@gmail.com') > 0 ? 
+        CREDS.smtp.username : 
+        CREDS.smtp.username + '@gmail.com';
+        
     var Message = require("./message.js");
     var message = new Message(
-        'bratokokok@gmail.com',
-        'bratokokok@gmail.com',
+        targetEmail,
+        targetEmail,
         'Reports notification',
         ''
     );
