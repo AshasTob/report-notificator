@@ -11,6 +11,11 @@ module.exports = {
         username: 'login',
         password: 'pass'
     },
+    //E-MAIL CONFIGURATION
+    mail: {
+        from: 'from@mail.com' or 'Your Name <from@mail.com>',
+        to: 'to@mail.com'
+    },
     //URL TO SLACK WEBHOOKS SERVICE
 	//SET TO EMPTY STRING IF YOU HAVE NO SLACK CHANNEL.
     slack: {
